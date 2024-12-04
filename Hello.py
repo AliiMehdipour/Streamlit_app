@@ -6,8 +6,7 @@ import plotly.express as px
 import time
 import numpy as np
 
-DB_USERNAME = "alimehdipourka"
-DB_TOKEN = "diI4xvdIelYlNcl6"
+
 st.set_page_config(page_title="Dashboard", layout="wide")
 @st.cache_resource
 def initialize_database_connection():
