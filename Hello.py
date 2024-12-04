@@ -6,11 +6,13 @@ import plotly.express as px
 import time
 import numpy as np
 
+DB_USERNAME = "alimehdipourka"
+DB_TOKEN = "diI4xvdIelYlNcl6"
 st.set_page_config(page_title="Dashboard", layout="wide")
 @st.cache_resource
 def initialize_database_connection():
     # MongoDB connection
-    client = MongoClient('mongodb+srv://alimehdipourka:diI4xvdIelYlNcl6@cluster0.2kwup.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+    client = MongoClient('mongodb+srv://$DB_USERNAME:$DB_TOKEN@cluster0.2kwup.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
     db = client['Job']
     collection = db['jobs']
     return collection
