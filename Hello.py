@@ -10,7 +10,7 @@ st.set_page_config(page_title="Dashboard", layout="wide")
 @st.cache_resource
 def initialize_database_connection():
     # MongoDB connection
-    client = MongoClient('mongodb://localhost:27017/')
+    client = MongoClient('mongodb+srv://alimehdipourka:diI4xvdIelYlNcl6@cluster0.2kwup.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
     db = client['Job']
     collection = db['jobs']
     return collection
