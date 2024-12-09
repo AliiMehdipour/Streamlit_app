@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 
 # MongoDB connection
-client = MongoClient(''mongodb+srv://reader:Rb07Blz8WxjR37Ut@cluster0.2kwup.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'')
+client = MongoClient('mongodb+srv://reader:Rb07Blz8WxjR37Ut@cluster0.2kwup.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 db = client['Job']
 collection = db['jobs']
 
