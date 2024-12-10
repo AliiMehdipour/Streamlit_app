@@ -8,13 +8,6 @@ import numpy as np
 
 
 st.set_page_config(page_title="Dashboard", layout="wide")
-adsense_script = """
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5836320764804844"
-     crossorigin="anonymous"></script>
-"""
-
-# Add the meta tag to the Streamlit app
-st.markdown(adsense_script , unsafe_allow_html=True)
 
 @st.cache_resource
 def initialize_database_connection():
