@@ -7,6 +7,14 @@ from folium.plugins import MarkerCluster
 import matplotlib.pyplot as plt
 import plotly.express as px
 
+meta_tag = """
+<head>
+    <meta name="google-adsense-account" content="ca-pub-5836320764804844">
+</head>
+"""
+
+# Add the meta tag to the Streamlit app
+st.markdown(meta_tag, unsafe_allow_html=True)
 # MongoDB connection
 client = MongoClient('mongodb+srv://reader:Rb07Blz8WxjR37Ut@cluster0.2kwup.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 db = client['Job']
