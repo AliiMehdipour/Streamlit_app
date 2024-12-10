@@ -224,7 +224,7 @@ cursor = collection.aggregate([
          "$match": query["date"]
     },
     {
-        "$limit":10
+        "$limit":100
     },
 ])
 data = list(cursor)
