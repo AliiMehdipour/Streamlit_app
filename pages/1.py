@@ -10,6 +10,7 @@ import plotly.express as px
 
 
 
+collection = initialize_database_connection()
 # Streamlit app
 st.title('Jobs Distribution')
 
