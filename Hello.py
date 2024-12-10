@@ -227,6 +227,7 @@ cursor = collection.aggregate([
         "$sample":{"size":100}
     },
 ])
+st.write("Data is fetched. Working on the data...")
 data = list(cursor)
 df = pd.DataFrame(data)
 
