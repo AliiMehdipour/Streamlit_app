@@ -9,7 +9,13 @@ import plotly.express as px
 
 
 
-
+@st.cache_resource
+def initialize_database_connection():
+    # MongoDB connection
+    client = MongoClient('mongodb+srv://reader:Rb07Blz8WxjR37Ut@cluster0.2kwup.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+    db = client['Job']
+    collection = db['jobs']
+    return collection
 collection = initialize_database_connection()
 # Streamlit app
 st.title('Jobs Distribution')
