@@ -224,7 +224,7 @@ cursor = collection.aggregate([
          "$match": query["date"]
     },
     {
-        "$limit":100
+        "$sample":{"size":100}
     },
 ])
 data = list(cursor)
@@ -239,7 +239,7 @@ num_documents = len(df)
 st.title('Dashboard')
 
 # Display general information
-st.markdown(f"**Number of Returned Documents:** {num_documents}")
+st.markdown(f"**Number of sampled and returned Documents:** {num_documents}")
 st.write(df)
 # Plot interactive linear histogram grouped by job types
 st.subheader("General Informations-Job Types")
