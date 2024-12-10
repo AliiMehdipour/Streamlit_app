@@ -14,7 +14,7 @@ adsense_script = """
 """
 
 # Add the meta tag to the Streamlit app
-st.markdown(meta_tag, unsafe_allow_html=True)
+st.markdown(adsense_script , unsafe_allow_html=True)
 
 @st.cache_resource
 def initialize_database_connection():
