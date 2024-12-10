@@ -205,7 +205,7 @@ else:
 cursor = collection.aggregate([
 
     {
-        "$sample":{"size":10}
+        "$sample":{"size":1000}
     },
     {
         "$match": {"sourceCC":query['country_codes']}
@@ -226,7 +226,7 @@ cursor = collection.aggregate([
          "$match": query["date"]
     },
     {
-        "$limit":1000
+        "$limit":10
     },
 ])
 data = list(cursor)
