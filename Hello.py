@@ -8,10 +8,9 @@ import numpy as np
 
 
 st.set_page_config(page_title="Dashboard", layout="wide")
-meta_tag = """
-<head>
-    <meta name="google-adsense-account" content="ca-pub-5836320764804844">
-</head>
+adsense_script = """
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5836320764804844"
+     crossorigin="anonymous"></script>
 """
 
 # Add the meta tag to the Streamlit app
