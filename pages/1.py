@@ -7,13 +7,7 @@ from folium.plugins import MarkerCluster
 import matplotlib.pyplot as plt
 import plotly.express as px
 
-adsense_script = """
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5836320764804844"
-     crossorigin="anonymous"></script>
-"""
 
-# Add the meta tag to the Streamlit app
-st.markdown(adsense_script , unsafe_allow_html=True)
 # MongoDB connection
 client = MongoClient('mongodb+srv://reader:Rb07Blz8WxjR37Ut@cluster0.2kwup.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 db = client['Job']
