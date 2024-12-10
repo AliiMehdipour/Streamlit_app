@@ -239,7 +239,9 @@ st.title('Dashboard')
 
 # Display general information
 st.markdown(f"**Number of Returned Documents:** {num_documents}")
-st.write(df)
+df2 = copy(df)
+df2['_id'] = df2['_id'].astype(str)
+st.write(df2)
 # Plot interactive linear histogram grouped by job types
 st.subheader("General Informations-Job Types")
 @st.cache_data
