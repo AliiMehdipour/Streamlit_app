@@ -5,7 +5,7 @@ from datetime import datetime
 import plotly.express as px
 import time
 import numpy as np
-
+import copy
 
 st.set_page_config(page_title="Dashboard", layout="wide")
 
@@ -239,7 +239,7 @@ st.title('Dashboard')
 
 # Display general information
 st.markdown(f"**Number of Returned Documents:** {num_documents}")
-df2 = copy(df)
+df2 = copy.deepcopy(df)
 df2['_id'] = df2['_id'].astype(str)
 st.write(df2)
 # Plot interactive linear histogram grouped by job types
