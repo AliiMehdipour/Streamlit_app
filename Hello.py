@@ -233,7 +233,7 @@ df = pd.DataFrame(data)
 # Calculate general information
 
 
-num_documents = df.len()
+num_documents = df.__len__
 
 # Main content
 st.title('Dashboard')
