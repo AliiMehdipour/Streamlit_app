@@ -224,10 +224,9 @@ cursor = collection.aggregate([
          "$match": query["date"]
     },
     {
-        "$sample":{"size":100}
+        "$sample":{"size":50}
     },
 ])
-st.write("Data is fetched. Working on the data...")
 data = list(cursor)
 df = pd.DataFrame(data)
 
