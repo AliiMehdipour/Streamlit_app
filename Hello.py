@@ -8,6 +8,15 @@ import numpy as np
 
 
 st.set_page_config(page_title="Dashboard", layout="wide")
+meta_tag = """
+<head>
+    <meta name="google-adsense-account" content="ca-pub-5836320764804844">
+</head>
+"""
+
+# Add the meta tag to the Streamlit app
+st.markdown(meta_tag, unsafe_allow_html=True)
+
 @st.cache_resource
 def initialize_database_connection():
     # MongoDB connection
