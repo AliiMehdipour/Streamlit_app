@@ -6,7 +6,7 @@ adsense_script = """
 """
 
 # Add the meta tag to the Streamlit app
-st.markdown(meta_tag, unsafe_allow_html=True)
+st.markdown(adsense_script , unsafe_allow_html=True)
 
 # Example content for your app
 st.title("Welcome to My Streamlit App")
