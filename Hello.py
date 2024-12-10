@@ -202,29 +202,38 @@ else:
 
 
 
-# Combine all $match conditions into a single stage
 cursor = collection.aggregate([
+
+
     {
-        "$match": {
-            "sourceCC": query['country_codes'],
-            "orgTags.CATEGORIES": query['Categories'],
-            **query["salary_value"],  # Assuming query["salary_value"] is a dictionary
-            "position.workType": query["job_type"],
-            "name": query["name"],
-            "date": query["date"]
-        }
+        "$match": {"sourceCC":query['country_codes']}
     },
     {
-        "$sample": {"size": 100}  # Randomly sample 100 documents from the filtered result
+         "$match": {"orgTags.CATEGORIES":query['Categories']}
+    },
+    {
+         "$match": query["salary_value"]
+    },
+    {
+         "$match": {"position.workType": query["job_type"]}
+    },
+    {
+         "$match": query["name"]
+    },
+    {
+         "$match": query["date"]
+    },
+    {
+        "$sample":{"size":100}
     },
 ])
+data = list(cursor)
+df = pd.DataFrame(data)
 
-# Directly convert the cursor to a DataFrame
-df = pd.DataFrame(cursor)
+# Calculate general information
 
-# Calculate the number of documents
+
 num_documents = len(df)
-
 
 # Main content
 st.title('Dashboard')
